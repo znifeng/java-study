@@ -1,2 +1,20 @@
-# design-pattern
-design-pattern study codes
+设计模式及Java基础相关学习代码
+===
+包含：
+
+1.Java基础
+---
+- 自定义注解
+- classloader
+- 集合collection
+- 泛型
+- 反射
+
+2.设计模式
+===
+- 命令模式   
+- 工厂模式（简单工厂、工厂、抽象工厂）  
+- 观察者模式  
+- 代理模式（静态代理、动态代理）  
+- 单例模式  
+- 策略模式  

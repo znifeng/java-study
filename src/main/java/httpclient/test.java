@@ -1,7 +1,5 @@
 package httpclient;
 
-import httpclient.HttpRequest;
-
 import java.util.HashMap;
 
 public class test {

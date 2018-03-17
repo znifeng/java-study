@@ -39,9 +39,11 @@ public class HttpRequest {
         StringBuffer urlBuffer = new StringBuffer(url);
 		StringBuffer paramsBuffer = new StringBuffer(20);
         String requestUrl;
-		//封装参数到url
-		for (Map.Entry<String, Object> entry :params.entrySet()){
-		    paramsBuffer.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
+        //封装参数到url
+        if (params != null){
+            for (Map.Entry<String, Object> entry :params.entrySet()){
+                paramsBuffer.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
+            }
         }
 
         if (paramsBuffer.length()>0){

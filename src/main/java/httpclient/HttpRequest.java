@@ -80,10 +80,12 @@ public class HttpRequest {
         HttpPost post = new HttpPost(url);
         List<NameValuePair> nvps = new ArrayList<>();
 
-        for (Map.Entry<String, String> entry :params.entrySet()){
-            nvps.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+        if (params!=null){
+            for (Map.Entry<String, String> entry :params.entrySet()){
+                nvps.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+            }
         }
-
+        
         StringEntity s= new UrlEncodedFormEntity(nvps);
         s.setContentEncoding("UTF-8");
         post.setEntity(s);

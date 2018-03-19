@@ -31,5 +31,23 @@ public class ScheduledThreadPoolTest {
         //周期性执行，command执行完一次后，会等待固定时间delay，再执行下一次
         scheduledThreadPool.scheduleWithFixedDelay(t3, 0L, 4L, TimeUnit.SECONDS);
 
+        //测试线程出现异常后，会不会继续周期性地执行——不会
+//        MyThread t= new MyThread();
+//        scheduledThreadPool.scheduleAtFixedRate(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println(Thread.currentThread().getName());
+//                throw new RuntimeException();
+//            }
+//        }, 1L, 4L, TimeUnit.SECONDS);
+
+    }
+}
+
+class MyThread extends Thread{
+    @Override
+    public void run(){
+        System.out.println(Thread.currentThread().getName());
+        throw new RuntimeException();
     }
 }

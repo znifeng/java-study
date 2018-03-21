@@ -11,6 +11,8 @@ Java基础及设计模式学习代码
 - 集合collection
 - 泛型
 - 反射
+- HttpClient
+- 线程池
 
 2.设计模式
 ===
@@ -32,3 +34,7 @@ Blogs
 [设计模式学习（四）——单例模式](http://www.cnblogs.com/znicy/p/6659386.html)
 
 [设计模式学习（五）——命令模式](http://www.cnblogs.com/znicy/p/6753253.html)
+
+[Java多线程基础学习（一）](http://www.cnblogs.com/znicy/p/5647706.html)
+
+[Java多线程基础学习（二）](http://www.cnblogs.com/znicy/p/5681282.html)

@@ -13,6 +13,7 @@ Java基础及设计模式学习代码
 - 反射
 - HttpClient
 - 线程池
+- kafka producer & kafka consumer
 
 2.设计模式
 ===

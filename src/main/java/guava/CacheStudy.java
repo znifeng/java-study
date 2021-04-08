@@ -48,6 +48,7 @@ public class CacheStudy {
         myCache.put("key1", "value1");
         myCache.put("key2", "value2");
         myCache.put("key3", "value3");
+        myCache.put("key3", "new-value3");
 
         int n=5;
         while (n-- >0){
@@ -55,12 +56,9 @@ public class CacheStudy {
             System.out.println(myCache.getIfPresent("key1"));
             System.out.println(myCache.getIfPresent("key2"));
             System.out.println(myCache.getIfPresent("key3"));
-            System.out.println(myCache.get("key4", new Callable<String>() {
-                @Override
-                public String call() throws Exception {
-                    System.out.println("I am reload");
-                    return "autoload";
-                }
+            System.out.println(myCache.get("key4", ()->{
+                System.out.println("I am reload");
+                return "autoload";
             }));
             Thread.sleep(1000);
             System.out.println("==============================");

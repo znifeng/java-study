@@ -12,9 +12,9 @@ public class FilterTest {
             "/custom/6/product/preview/multiMinute/5010"
         );
 
-        String url = "https://x.alibaba-inc.com/custom/6/product/preview/multiMinute/5010";
+        String url = "https://x.alibaba-inc.com/custom/6/product/preview/multiMinute/501x0";
         List<String> filterd = PID_MONITOR_TO_DIAGNOSE.stream().filter(t -> url!=null && url.contains(t)).collect(
             Collectors.toList());
-        System.out.println(filterd);
+        System.out.println(filterd.size());
     }
 }

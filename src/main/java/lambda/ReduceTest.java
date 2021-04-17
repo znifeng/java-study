@@ -12,12 +12,7 @@ public class ReduceTest {
             "p4pservice"
         );
 
-        String appStr = appList.stream().reduce(new BinaryOperator<String>() {
-            @Override
-            public String apply(String s, String s2) {
-                return s+","+s2;
-            }
-        }).get();
+        String appStr = appList.stream().reduce((String s, String s2) -> s+","+s2).get();
         System.out.println(appStr);
     }
 }

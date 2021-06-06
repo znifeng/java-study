@@ -1,6 +1,6 @@
 package threadpool;
 
-public class MyCommand implements  Runnable{
+public class MyCommand implements Runnable{
     private String name;
     public MyCommand(){super();}
     public MyCommand(String name){
@@ -12,6 +12,7 @@ public class MyCommand implements  Runnable{
         System.out.println(Thread.currentThread().getName() + " with mycommand name " + name + " is running.");
         try {
             Thread.sleep(5000);
+            System.out.println(Thread.currentThread().getName() + " with mycommand name " + name + " end.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

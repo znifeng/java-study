@@ -22,7 +22,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * @return the newly created thread pool
  */
 //适合短生命周期的异步任务，按需创建新的线程。旧线程如果超过60s没被使用，则会自动销毁。当没有线程需要运行时，线程池可以不消耗任何资源
-public class CachedThreadPool {
+public class CachedThreadPoolTest {
     /* newCachedThreadPool()方法，线程的默认存活时间为60s
         public static ExecutorService newCachedThreadPool() {
         return new ThreadPoolExecutor(0, Integer.MAX_VALUE,

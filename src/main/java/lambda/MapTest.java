@@ -21,5 +21,9 @@ public class MapTest {
 
         List<String> formatList = PID_MONITOR_TO_DIAGNOSE.stream().map( x -> "http://" + x).collect(Collectors.toList());
         System.out.println(formatList);
+
+        String ids= "12,34,56";
+        List<Long> idsLong = Arrays.stream(ids.split(",")).map(item -> Long.parseLong(item)).collect(Collectors.toList());
+        System.out.println(idsLong);
     }
 }

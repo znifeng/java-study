@@ -9,12 +9,13 @@ public class FilterTest {
         final List<String> PID_MONITOR_TO_DIAGNOSE = Arrays.asList(
             "/custom/6/product/preview/multiMinute/4749",
             "/custom/6/product/preview/multiMinute/5010",
+            "",
             "/custom/6/product/preview/multiMinute/5010"
         );
 
-        String url = "https://x.alibaba-inc.com/custom/6/product/preview/multiMinute/501x0";
+        String url = "https://x.wy.com/custom/6/product/preview/multiMinute/5010";
         List<String> filterd = PID_MONITOR_TO_DIAGNOSE.stream().filter(t -> url!=null && url.contains(t)).collect(
             Collectors.toList());
-        System.out.println(filterd.size());
+        System.out.println(filterd);
     }
 }
